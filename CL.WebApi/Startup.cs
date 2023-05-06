@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,10 @@ namespace CL.WebApi
 
             services.AddSwaggerGen(c => 
             {
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo {Title = "Consultório Legal", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo {
+                    Version = "v1",
+                    Title = "Consultório Legal",
+                });
             });
         }
 
@@ -51,12 +55,15 @@ namespace CL.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-
-            app.UseSwaggerUI( c => 
+            app.UseSwagger( options =>
             {
-                c.RoutePrefix = string.Empty;
-                c.SwaggerEndpoint("./swagger/v1/swagger.json","CL V1");
+                options.SerializeAsV2 = true;
+            });
+
+            app.UseSwaggerUI(options => 
+            {
+                options.SwaggerEndpoint("./swagger/v1/swagger.json", "v1");
+                options.RoutePrefix = string.Empty;
             });
 
             app.UseHttpsRedirection();

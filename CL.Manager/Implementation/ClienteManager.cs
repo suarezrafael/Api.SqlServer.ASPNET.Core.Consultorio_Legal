@@ -25,5 +25,20 @@ namespace CL.Manager.Implementation
         {
             return await clienteRepository.GetClienteAsync(id);
         }
+
+        public async Task<Cliente> InsertClienteAsync(Cliente cliente)
+        {
+            return await clienteRepository.InsertClienteAsync(cliente);
+        }
+
+        public async Task<Cliente> UpdateClienteAsync(Cliente cliente)
+        {
+            return await clienteRepository.UpdateClienteAsync(cliente);
+        }
+
+        public async Task DeleteClienteAsync(int id)
+        {
+            await clienteRepository.DeleteClienteAsync(id);
+        }
     }
 }
