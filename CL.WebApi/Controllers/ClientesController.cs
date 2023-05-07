@@ -1,5 +1,6 @@
 ﻿using CL.Core.Domain;
 using CL.Manager.Interfaces;
+using CL.Manager.Validator;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,6 @@ namespace CL.WebApi.Controllers
         public async Task<IActionResult> Post([FromBody] Cliente cliente)
         {
             var clienteInserido = await clienteManager.InsertClienteAsync(cliente);
-
             return CreatedAtAction(nameof(Get), new { id = cliente.Id }, clienteInserido);
         }
 
