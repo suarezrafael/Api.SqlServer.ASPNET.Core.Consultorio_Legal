@@ -19,12 +19,15 @@ namespace CL.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CL.Core.Domain.Cliente", b =>
+            modelBuilder.Entity("CL.Core.Domain.NovoCliente", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Criacao")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("datetime2");
@@ -41,6 +44,9 @@ namespace CL.Data.Migrations
 
                     b.Property<string>("Telefone")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UltimaAtualizacao")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

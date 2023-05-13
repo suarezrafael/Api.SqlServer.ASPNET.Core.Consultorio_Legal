@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CL.Data.Migrations
 {
     [DbContext(typeof(ClContext))]
-    [Migration("20230507111732_adicionadoCamposCliente")]
-    partial class adicionadoCamposCliente
+    [Migration("20230507120451_CamposDataDeControle")]
+    partial class CamposDataDeControle
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,6 +28,9 @@ namespace CL.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime>("Criacao")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("datetime2");
 
@@ -43,6 +46,9 @@ namespace CL.Data.Migrations
 
                     b.Property<string>("Telefone")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UltimaAtualizacao")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
