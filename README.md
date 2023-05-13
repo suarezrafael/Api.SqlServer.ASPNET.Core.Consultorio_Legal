@@ -3,8 +3,8 @@
 ## Resumo
 Web API ASP NET Core 3.1 , Swagger, EF Core, Fluent Validation, Auto Mapper, Validações personalizadas, Relacionamento UM x Um, Um x MUITOS, Muitos x Muitos, Enum e Testes Unitários XUnit. 
 
-01 - Estrutura - 15 min
-02 - Swagger - EF Core - Migrations - 47 min
+1. 01 - Estrutura - 15 min
+1. 02 - Swagger - EF Core - Migrations - 47 min
 03 - Repository - 30 min  
 04 - Post, Put, Delete - 28 min
 05 - Fluent Validation - 26 min
