@@ -1,4 +1,4 @@
-# Consultorio_Legal
+# Api.Consultorio
 
 ## Resumo
 Web API ASP NET Core 3.1 , Swagger, EF Core, Fluent Validation, Auto Mapper, Validações personalizadas, Relacionamento UM x Um, Um x MUITOS, Muitos x Muitos, Enum e Testes Unitários XUnit. 
@@ -28,4 +28,25 @@ Web API ASP NET Core 3.1 , Swagger, EF Core, Fluent Validation, Auto Mapper, Val
 1. - Autenticação e autorização com JWT - 72 min
 1. - Migrando o DotNet do 3.1 para 6.0 - 18 min
 1. - Implementando filed scope namespaces e global usings - 15 min
+
+### Bibliotecas utilizadas
+- automapper	 
+- automapper.extensions.microsoft.dependencyinjection
+- FluentValidation.AspNetCore
+- MicroElements.Swashbuckle.FluentValidation
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.Design   
+- Microsoft.EntityFrameworkCore.SqlServer 
+- Microsoft.EntityFrameworkCore.Tools
+- Microsoft.VisualStudio.Azure.Containers.Tools.Targets
+- Serilog.AspNetCore
+- Serilog.Exceptions
+- Serilog.Formatting.Compact
+- Serilog.Settings.COnfiguration
+- Serilog.Sinks.Async
+- Serilog.Sinks.File
+- SerilogTImings
+- Swashbuckle.AspNetCore
+
+
 
