@@ -17,14 +17,14 @@ namespace CL.WebApi.Configuration
                 c.SwaggerDoc("v1",
                     new OpenApiInfo
                     {
-                        Title = "Consultório Legal",
+                        Title = "Consultório",
                         Version = "v1",
-                        Description = "API da aplicação consultório legal.",
+                        Description = "API da aplicação consultório.",
                         Contact = new OpenApiContact
                         {
-                            Name = "Francis Silveira",
-                            Email = "francis.silveira@gmail.com",
-                            Url = new Uri("https://github.com/fsandrade")
+                            Name = "Rafael V. Suarez",
+                            Email = "rafaelv_s@hotmail.com",
+                            Url = new Uri("https://github.com/suarezrafael")
                         },
                         License = new OpenApiLicense
                         {
